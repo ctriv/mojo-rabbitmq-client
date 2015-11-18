@@ -4,7 +4,7 @@ name 'Mojo-RabbitMQ-Client';
 all_from 'lib/Mojo/RabbitMQ/Client.pm';
 
 requires 'Mojolicious' => '6.10'; # We require next_tick from Reactor
-requires 'Net::AMQP';
+requires 'Net::AMQP' => 0;
 
 tests 't/*.t';
 author_tests 'xt';
