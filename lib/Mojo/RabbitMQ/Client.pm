@@ -352,9 +352,11 @@ sub _tune {
         }
       ) if $heartbeat;
 
+      my $vhost = $self->url->path;
+      $vhost =~ s:^/+::;
       $self->_write_expect(
         'Connection::Open' =>
-          {virtual_host => $self->url->path, capabilities => '', insist => 1,},
+          {virtual_host => $vhost, capabilities => '', insist => 1,},
         'Connection::OpenOk' => sub {
           $self->is_open(1);
           $self->emit('open');
