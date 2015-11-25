@@ -7,7 +7,6 @@ requires 'Mojolicious' => '6.10'; # We require next_tick from Reactor
 requires 'Net::AMQP' => 0;
 
 tests 't/*.t';
-author_tests 'xt';
 
 build_requires 'Test::More';
 build_requires 'Test::Exception';
